@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/mainView"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/crime_item_rl"
+    >
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Crime Title"
+                android:id="@+id/crime_title"
+                android:textColor="@color/colorBlack"/>
+
+            <TextView
+                android:layout_below="@+id/crime_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crime Date"
+                android:layout_gravity="center"
+                android:id="@+id/crime_date"
+                android:textColor="@color/colorBlack"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/crime_seen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/see"
+        android:padding="10dp"
+        android:layout_toLeftOf="@id/crime_solved"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/crime_item_rl"/>
+
+    <ImageView
+        android:id="@+id/crime_solved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_solved"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/crime_item_rl"/>
+
+    <ImageView
+
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/crime_item_rl"
+        android:id="@+id/delete_crime_item"
+        android:layout_marginLeft="6dp"
+        android:layout_toRightOf="@id/crime_solved"
+        android:background="@drawable/ic_delete"
+        android:padding="15dp"
+
+        />
+
+</RelativeLayout>
